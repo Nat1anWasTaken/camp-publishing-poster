@@ -1,0 +1,13 @@
+{
+  "name": "camp-publishing-poster",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.5"
+  }
+}
