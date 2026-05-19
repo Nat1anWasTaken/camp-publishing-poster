@@ -101,8 +101,8 @@
 			}
 
 			.left {
-				display: grid;
-				grid-template-rows: auto 1fr;
+				display: flex;
+				flex-direction: column;
 				min-width: 0;
 				min-height: 0;
 				height: 100%;
@@ -138,11 +138,10 @@
 			}
 
 			.hero-copy {
-				align-self: start;
 				display: grid;
 				gap: 28px;
 				max-width: 850px;
-				padding-top: 132px;
+				margin-top: auto;
 			}
 
 			.kicker {
