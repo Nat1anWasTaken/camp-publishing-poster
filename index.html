@@ -128,82 +128,69 @@
             }
 
             .left {
-                display: flex;
-                flex-direction: column;
+                display: grid;
                 min-width: 0;
                 min-height: 0;
                 height: 100%;
             }
 
-            .brand-block {
-                display: flex;
-                width: fit-content;
-                align-items: center;
-                gap: 28px;
-                padding: 18px 24px 17px;
-                border: 3px solid var(--foreground);
-                border-radius: 8px;
-                background: var(--foreground);
-                box-shadow: 12px 12px 0 var(--green);
-            }
-
-            .brand-block img {
-                display: block;
-                width: 258px;
-                height: auto;
-            }
-
-            .brand-caption {
-                display: grid;
-                padding-left: 26px;
-                border-left: 3px solid rgba(249, 245, 239, 0.26);
-                color: var(--background);
-                font-size: 28px;
-                font-weight: 800;
-                line-height: 1.08;
-                white-space: nowrap;
-            }
-
             .hero-copy {
+                display: flex;
+                flex-direction: column;
+                max-width: 880px;
+                height: 100%;
+                padding-top: 78px;
+                padding-bottom: 24px;
+            }
+
+            .hero-message {
                 display: grid;
-                gap: 28px;
-                max-width: 850px;
+                gap: 34px;
                 margin-top: auto;
             }
 
-            .kicker {
-                display: flex;
-                width: fit-content;
-                align-items: center;
-                gap: 16px;
+            .event-title {
+                display: grid;
+                gap: 8px;
                 margin: 0;
-                color: var(--primary-blue);
-                font-size: 35px;
+                color: var(--foreground);
+                font-size: 118px;
                 font-weight: 800;
-                line-height: 1;
+                line-height: 0.92;
+                letter-spacing: 0;
             }
 
-            .kicker::before {
-                width: 86px;
-                height: 20px;
+            .event-title span {
+                display: block;
+            }
+
+            .event-year {
+                color: var(--primary-blue);
+                font-size: 150px;
+            }
+
+            .event-title::after {
+                width: 214px;
+                height: 22px;
+                margin-top: 20px;
                 background: var(--primary-blue);
                 content: "";
             }
 
-            h1 {
+            .slogan {
                 max-width: 850px;
                 margin: 0;
                 color: var(--foreground);
-                font-size: 80px;
+                font-size: 76px;
                 font-weight: 800;
-                line-height: 1;
+                line-height: 1.08;
                 letter-spacing: 0;
                 white-space: nowrap;
             }
 
             .highlight {
                 display: block;
-                margin-top: 10px;
+                margin-top: 14px;
                 color: var(--green);
                 white-space: nowrap;
             }
@@ -245,8 +232,8 @@
             }
 
             .section-heading h2 {
-                max-width: 850px;
-                font-size: 61px;
+                max-width: none;
+                font-size: 58px;
                 font-weight: 800;
                 line-height: 0.98;
                 letter-spacing: 0;
@@ -378,25 +365,20 @@
             </div>
 
             <section class="left" aria-label="營隊介紹">
-                <div class="brand-block">
-                    <img
-                        src="assets/brand/sitcon-camp-logo.svg"
-                        alt="SITCON Camp 2026"
-                    />
-                    <div class="brand-caption" aria-hidden="true">
-                        <span>資訊營隊</span>
-                    </div>
-                </div>
-
                 <div class="hero-copy">
-                    <p class="kicker">SITCON Camp 2026</p>
-                    <h1>
-                        給對資訊有興趣，
-                        <span class="highlight">想探索更多可能的您</span>
+                    <h1 class="event-title">
+                        <span>SITCON Camp</span>
+                        <span class="event-year">2026</span>
                     </h1>
-                    <p class="lead">
-                        走進資訊安全、軟體工程與人工智慧的實戰現場。
-                    </p>
+                    <div class="hero-message">
+                        <p class="slogan">
+                            給對資訊有興趣，
+                            <span class="highlight">想探索更多可能的您</span>
+                        </p>
+                        <p class="lead">
+                            走進資訊安全、軟體工程與人工智慧的實戰現場。
+                        </p>
+                    </div>
                 </div>
             </section>
 
